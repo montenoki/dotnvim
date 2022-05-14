@@ -2,12 +2,26 @@ local packer = require("packer")
 packer.startup({
   function(use)
     -- 拡張機能マネージャー
-    use 'wbthomason/packer.nvim'
+    use "wbthomason/packer.nvim"
     --------------------- colorschemes --------------------
     -- tokyonight
     use("folke/tokyonight.nvim")
     -- dracula.nvim
     use("Mofiqul/dracula.nvim")
+    -- OceanicNext
+    use("mhartington/oceanic-next")
+    -- gruvbox
+    use({
+      "ellisonleao/gruvbox.nvim",
+      requires = { "rktjmp/lush.nvim" },
+    })
+    -- nord
+    use("shaunsingh/nord.nvim")
+    -- onedark
+    use("ful1e5/onedark.nvim")
+    -- nightfox
+    use("EdenEast/nightfox.nvim")
+
     -------------------------------------------------------
   end,
   config = {
