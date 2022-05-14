@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\monten\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\monten\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dashboard-nvim",
+    url = "https://github.com/glepnir/dashboard-nvim"
+  },
   ["dracula.nvim"] = {
     loaded = true,
     path = "C:\\Users\\monten\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dracula.nvim",
@@ -133,6 +138,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\monten\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\monten\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope-env.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\monten\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-env.nvim",
+    url = "https://github.com/LinArcX/telescope-env.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\monten\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,

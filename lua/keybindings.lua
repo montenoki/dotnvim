@@ -94,4 +94,27 @@ map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
 map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 
+-- Telescope
+-- ファイル検索
+map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+-- グローバル検索
+map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
+pluginKeys.telescopeList = {
+  i = {
+
+    ["<C-j>"] = "move_selection_next",
+    ["<C-k>"] = "move_selection_previous",
+    ["<Down>"] = "move_selection_next",
+    ["<Up>"] = "move_selection_previous",
+
+    ["<C-n>"] = "cycle_history_next",
+    ["<C-p>"] = "cycle_history_prev",
+
+    ["<C-c>"] = "close",
+
+    ["<C-u>"] = "preview_scrolling_up",
+    ["<C-d>"] = "preview_scrolling_down",
+  },
+}
+
 return pluginKeys
