@@ -24,8 +24,12 @@ packer.startup({
     ----------------------- plugins ------------------------
     -- ディレクトリツリー
     use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
-    -- Tab Bar
+    -- タブ表示
     use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
+    -- ステータスバー表示
+    use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
+    use("arkav/lualine-lsp-progress")
+
   end,
   config = {
     display = {

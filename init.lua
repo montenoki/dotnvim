@@ -8,6 +8,7 @@ require("keybindings")
 require("plugins")
 require("plugin-config.nvim-tree")
 require("plugin-config.bufferline")
+require("plugin-config.lualine")
 
 -- Colorscheme
 require("colorscheme")
