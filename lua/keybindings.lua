@@ -117,4 +117,7 @@ pluginKeys.telescopeList = {
   },
 }
 
+-- Dashboard
+map("n", "<leader>d", ":Dashboard<CR>", opt)
+
 return pluginKeys

@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\monten\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["project.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\monten\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\project.nvim",
+    url = "https://github.com/ahmedkhalf/project.nvim"
+  },
   ["telescope-env.nvim"] = {
     loaded = true,
     path = "C:\\Users\\monten\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-env.nvim",

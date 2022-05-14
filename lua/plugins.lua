@@ -40,6 +40,9 @@ packer.startup({
     -- 開始画面
     use("glepnir/dashboard-nvim")
 
+    -- project
+    use("ahmedkhalf/project.nvim")
+
   end,
   config = {
     display = {
