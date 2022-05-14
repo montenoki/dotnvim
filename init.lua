@@ -1,6 +1,5 @@
 -- 基本設定
 require("basic")
-
 -- キーバインド
 require("keybindings")
 
@@ -19,3 +18,4 @@ require("colorscheme")
 
 -- LSP
 require("lsp.setup")
+require("lsp.cmp")

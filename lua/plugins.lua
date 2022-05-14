@@ -51,6 +51,21 @@ packer.startup({
         -- Lspconfig
         use({ "neovim/nvim-lspconfig" })
 
+
+        --------------------- autocomplete ---------------------
+        -- 自動補完エンジン
+        use("hrsh7th/nvim-cmp")
+        -- snippet エンジン
+        use("hrsh7th/vim-vsnip")
+        -- 補完ソース
+        use("hrsh7th/cmp-vsnip")
+        use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
+        use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
+        use("hrsh7th/cmp-path") -- { name = 'path' }
+        use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
+
+        -- よく使う snippet
+        use("rafamadriz/friendly-snippets")
         --------------------------------------------------------
     end,
     config = {
