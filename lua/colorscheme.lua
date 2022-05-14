@@ -1,4 +1,4 @@
-local colorscheme = "tokyonight"
+local colorscheme = "dracula"
 -- tokyonight
 -- OceanicNext
 -- gruvbox
@@ -14,6 +14,6 @@ vim.g.tokyonight_transparent_sidebar = true
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
-  vim.notify("colorscheme: " .. colorscheme .. " Not Found!")
-  return
+    vim.notify("colorscheme: " .. colorscheme .. " Not Found!")
+    return
 end

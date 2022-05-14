@@ -64,24 +64,24 @@ local pluginKeys = {}
 map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)  -- alt + m ON/OFF
 -- ファイル操作
 pluginKeys.nvimTreeList = {
-  -- Open file
-  { key = {"<CR>", "o", "<2-LeftMouse>"}, action = "edit" },
-  -- Open file at split window
-  { key = "v", action = "vsplit" },
-  { key = "h", action = "split" },
-  -- ignore ファイル表示・非表示
-  { key = "i", action = "toggle_ignored" }, -- Ignore (node_modules)
-  -- dot ファイル表示・非表示 
-  { key = ".", action = "toggle_dotfiles" }, -- Hide (dotfiles)
+    -- Open file
+    { key = {"<CR>", "o", "<2-LeftMouse>"}, action = "edit" },
+    -- Open file at split window
+    { key = "v", action = "vsplit" },
+    { key = "h", action = "split" },
+    -- ignore ファイル表示・非表示
+    { key = "i", action = "toggle_ignored" }, -- Ignore (node_modules)
+    -- dot ファイル表示・非表示 
+    { key = ".", action = "toggle_dotfiles" }, -- Hide (dotfiles)
 
-  { key = "<F5>", action = "refresh" },
-  { key = "a", action = "create" },
-  { key = "d", action = "remove" },
-  { key = "r", action = "rename" },
-  { key = "x", action = "cut" },
-  { key = "c", action = "copy" },
-  { key = "p", action = "paste" },
-  { key = "s", action = "system_open" },
+    { key = "<F5>", action = "refresh" },
+    { key = "a", action = "create" },
+    { key = "d", action = "remove" },
+    { key = "r", action = "rename" },
+    { key = "x", action = "cut" },
+    { key = "c", action = "copy" },
+    { key = "p", action = "paste" },
+    { key = "s", action = "system_open" },
 }
 
 -- bufferline
@@ -100,24 +100,51 @@ map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 -- グローバル検索
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 pluginKeys.telescopeList = {
-  i = {
+    i = {
 
-    ["<C-j>"] = "move_selection_next",
-    ["<C-k>"] = "move_selection_previous",
-    ["<Down>"] = "move_selection_next",
-    ["<Up>"] = "move_selection_previous",
+        ["<C-j>"] = "move_selection_next",
+        ["<C-k>"] = "move_selection_previous",
+        ["<Down>"] = "move_selection_next",
+        ["<Up>"] = "move_selection_previous",
 
-    ["<C-n>"] = "cycle_history_next",
-    ["<C-p>"] = "cycle_history_prev",
+        ["<C-n>"] = "cycle_history_next",
+        ["<C-p>"] = "cycle_history_prev",
 
-    ["<C-c>"] = "close",
+        ["<C-c>"] = "close",
 
-    ["<C-u>"] = "preview_scrolling_up",
-    ["<C-d>"] = "preview_scrolling_down",
-  },
+        ["<C-u>"] = "preview_scrolling_up",
+        ["<C-d>"] = "preview_scrolling_down",
+    },
 }
 
 -- Dashboard
 map("n", "<leader><leader>d", ":Dashboard<CR>", opt)
 
+-- lsp
+pluginKeys.mapLSP = function(mapbuf)
+  -- rename
+  mapbuf("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
+  -- code action
+  mapbuf("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
+  -- go xx
+  mapbuf("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
+  mapbuf("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
+  mapbuf("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opt)
+  mapbuf("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)
+  mapbuf("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opt)
+  -- diagnostic
+  mapbuf("n", "gp", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)
+  mapbuf("n", "gk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opt)
+  mapbuf("n", "gj", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
+  mapbuf("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opt)
+  -- 使ってない機能
+  -- mapbuf('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opt)
+  -- mapbuf("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opt)
+  -- mapbuf('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opt)
+  -- mapbuf('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opt)
+  -- mapbuf('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opt)
+  -- mapbuf('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opt)
+end
+
 return pluginKeys
+

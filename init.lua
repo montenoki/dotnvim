@@ -17,3 +17,5 @@ require("plugin-config.nvim-treesitter")
 -- Colorscheme
 require("colorscheme")
 
+-- LSP
+require("lsp.setup")
