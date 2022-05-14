@@ -1,6 +1,6 @@
 -- utf8
-vim.g.encoding = "UTF-8"
-vim.o.fileencoding = "utf-8"
+vim.g.encoding = 'UTF-8'
+vim.o.fileencoding = 'utf-8'
 -- hjkl 移動時の上下デッドゾーン
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
@@ -10,9 +10,9 @@ vim.wo.relativenumber = true
 -- 所在行ハッチング
 vim.wo.cursorline = true
 -- アイコン列表示
-vim.wo.signcolumn = "yes"
+vim.wo.signcolumn = 'yes'
 -- 垂直ルーラー表示
-vim.wo.colorcolumn = "80"
+vim.wo.colorcolumn = '80'
 -- Tab の長さ
 vim.o.tabstop = 4
 vim.bo.tabstop = 4
@@ -43,11 +43,11 @@ vim.bo.autoread = true
 -- 行の折返し OFF
 vim.wo.wrap = false
 -- ← → で行頭行尾移動時、次の行に移動
-vim.o.whichwrap = "<,>,[,]"
+vim.o.whichwrap = '<,>,[,]'
 -- 修正ありの Buffer は非表示可能
 vim.o.hidden = true
 -- マウスサポート ON
-vim.o.mouse = "a"
+vim.o.mouse = 'a'
 -- バックアップ OFF
 vim.o.backup = false
 vim.o.writebackup = false
@@ -60,18 +60,18 @@ vim.o.timeoutlen = 400
 vim.o.splitbelow = true
 vim.o.splitright = true
 -- 自動補完時、自動選択しない
-vim.g.completeopt = "menu,menuone,noselect,noinsert"
+vim.g.completeopt = 'menu,menuone,noselect,noinsert'
 -- スタイル
-vim.o.background = "dark"
+vim.o.background = 'dark'
 vim.o.termguicolors = true
 vim.opt.termguicolors = true
 -- 見えないをスペースを点に表示
 vim.o.list = true
-vim.o.listchars = "space:·"
+vim.o.listchars = 'space:·'
 -- 自動補完機能のメニュー表示
 vim.o.wildmenu = true
 -- Dont' pass messages to |ins-completin menu|
-vim.o.shortmess = vim.o.shortmess .. "c"
+vim.o.shortmess = vim.o.shortmess .. 'c'
 -- 自動補完機能の表示数
 vim.o.pumheight = 10
 -- Tabline 常時表示

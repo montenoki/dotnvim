@@ -1,37 +1,37 @@
-local status, lualine = pcall(require, "lualine")
+local status, lualine = pcall(require, 'lualine')
 if not status then
-    vim.notify("lualine Not Found!")
+    vim.notify('lualine Not Found!')
     return
 end
 
 lualine.setup({
     options = {
-        theme = "auto",
-        component_separators = { left = "|", right = "|" },
+        theme = 'auto',
+        component_separators = { left = '|', right = '|' },
         -- https://github.com/ryanoasis/powerline-extra-symbols
-        section_separators = { left = " ", right = "" },
+        section_separators = { left = ' ', right = '' },
     },
-    extensions = { "nvim-tree", "toggleterm" },
+    extensions = { 'nvim-tree', 'toggleterm' },
     sections = {
         lualine_c = {
-            "filename",
+            'filename',
             {
-                "lsp_progress",
-                spinner_symbols = { " ", " ", " ", " ", " ", " " },
+                'lsp_progress',
+                spinner_symbols = { ' ', ' ', ' ', ' ', ' ', ' ' },
             },
         },
         lualine_x = {
-            "filesize",
+            'filesize',
             {
-                "fileformat",
+                'fileformat',
                 symbols = {
-                    unix = "LF", -- e712
-                    dos = "CRLF", -- e70f
-                    mac = "CR", -- e711
+                    unix = 'LF', -- e712
+                    dos = 'CRLF', -- e70f
+                    mac = 'CR', -- e711
                 },
             },
-            "encoding",
-            "filetype",
+            'encoding',
+            'filetype',
         },
     },
 })

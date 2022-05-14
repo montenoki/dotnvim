@@ -1,11 +1,11 @@
-local status, nvim_tree = pcall(require, "nvim-tree")
-    if not status then
-    vim.notify("nvim-tree Not Found!")
+local status, nvim_tree = pcall(require, 'nvim-tree')
+if not status then
+    vim.notify('nvim-tree Not Found!')
     return
 end
 
 -- キーバインド導入
-local list_keys = require("keybindings").nvimTreeList
+local list_keys = require('keybindings').nvimTreeList
 nvim_tree.setup({
     -- git 状態表示 on/off
     git = {
@@ -20,13 +20,13 @@ nvim_tree.setup({
     -- dot ファイルと node_modules フォルダー非表示
     filters = {
         dotfiles = true,
-        custom = { "node_modules" },
+        custom = { 'node_modules' },
     },
     view = {
         -- 幅
         width = 40,
         -- 左右
-        side = "left",
+        side = 'left',
         -- ルートフォルダー非表示
         hide_root_folder = false,
         -- キーバインド導入
@@ -38,7 +38,7 @@ nvim_tree.setup({
         number = false,
         relativenumber = false,
         -- アイコン表示
-        signcolumn = "yes",
+        signcolumn = 'yes',
     },
     actions = {
         -- ファイルを開く時の action

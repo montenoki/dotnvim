@@ -1,11 +1,11 @@
-local cmp = require("cmp")
+local cmp = require('cmp')
 
 cmp.setup({
     -- snippet エンジン指定
     snippet = {
         expand = function(args)
             -- For `vsnip` users.
-            vim.fn["vsnip#anonymous"](args.body)
+            vim.fn['vsnip#anonymous'](args.body)
 
             -- For `luasnip` users.
             -- require('luasnip').lsp_expand(args.body)
@@ -19,9 +19,9 @@ cmp.setup({
     },
     -- 補完ソース
     sources = cmp.config.sources({
-        { name = "nvim_lsp" },
+        { name = 'nvim_lsp' },
         -- For vsnip users.
-        { name = "vsnip" },
+        { name = 'vsnip' },
 
         -- For luasnip users.
         -- { name = 'luasnip' },
@@ -31,24 +31,26 @@ cmp.setup({
 
         -- -- For snippy users.
         -- { name = 'snippy' },
-    }, { { name = "buffer" }, { name = "path" } }),
+    }, { { name = 'buffer' }, { name = 'path' } }),
 
     -- キーバインド導入
-    mapping = require("keybindings").cmp(cmp),
+    mapping = require('keybindings').cmp(cmp),
+    -- lspkind-nvim icon 表示
+    formatting = require('lsp.ui').formatting,
 })
 
 -- / 検索モード buffer を使う
-cmp.setup.cmdline("/", {
+cmp.setup.cmdline('/', {
     sources = {
-        { name = "buffer" },
+        { name = 'buffer' },
     },
 })
 
 -- : コマンドモード path cmdline を使う
-cmp.setup.cmdline(":", {
+cmp.setup.cmdline(':', {
     sources = cmp.config.sources({
-        { name = "path" },
+        { name = 'path' },
     }, {
-            { name = "cmdline" },
-        }),
+        { name = 'cmdline' },
+    }),
 })

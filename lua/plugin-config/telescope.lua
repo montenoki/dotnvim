@@ -1,20 +1,18 @@
-local status, telescope = pcall(require, "telescope")
+local status, telescope = pcall(require, 'telescope')
 if not status then
-    vim.notify("telescope Not Found!")
+    vim.notify('telescope Not Found!')
     return
 end
 
 telescope.setup({
     defaults = {
-        initial_mode = "insert",
-        mappings = require("keybindings").telescopeList,
+        initial_mode = 'insert',
+        mappings = require('keybindings').telescopeList,
     },
     pickers = {
-        find_files = {
-        }
+        find_files = {},
     },
-    extensions = {
-    },
+    extensions = {},
 })
 
-pcall(telescope.load_extension, "env")
+pcall(telescope.load_extension, 'env')

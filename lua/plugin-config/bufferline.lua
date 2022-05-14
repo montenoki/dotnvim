@@ -1,29 +1,29 @@
-local status, bufferline = pcall(require, "bufferline")
+local status, bufferline = pcall(require, 'bufferline')
 if not status then
-    vim.notify("bufferline Not Found!")
+    vim.notify('bufferline Not Found!')
     return
 end
 
 -- https://github.com/akinsho/bufferline.nvim#configuration
 bufferline.setup({
     options = {
-        close_command = "Bdelete! %d",
-        right_mouse_command = "Bdelete! %d",
+        close_command = 'Bdelete! %d',
+        right_mouse_command = 'Bdelete! %d',
         offsets = {
             {
-                filetype = "NvimTree",
-                text = "File Explorer",
-                highlight = "Directory",
-                text_align = "left",
+                filetype = 'NvimTree',
+                text = 'File Explorer',
+                highlight = 'Directory',
+                text_align = 'left',
             },
         },
         -- LSP連携
-        diagnostics = "nvim_lsp",
+        diagnostics = 'nvim_lsp',
         ---@diagnostic disable-next-line: unused-local
         diagnostics_indicator = function(count, level, diagnostics_dict, context)
-            local s = " "
+            local s = ' '
             for e, n in pairs(diagnostics_dict) do
-                local sym = e == "error" and " " or (e == "warning" and " " or "")
+                local sym = e == 'error' and ' ' or (e == 'warning' and ' ' or '')
                 s = s .. n .. sym
             end
             return s
