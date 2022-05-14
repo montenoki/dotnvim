@@ -21,9 +21,11 @@ packer.startup({
     use("ful1e5/onedark.nvim")
     -- nightfox
     use("EdenEast/nightfox.nvim")
-    -------------------------------------------------------
+    ----------------------- plugins ------------------------
     -- ディレクトリツリー
     use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
+    -- Tab Bar
+    use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
   end,
   config = {
     display = {
