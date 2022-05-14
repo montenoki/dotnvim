@@ -3,6 +3,12 @@ packer.startup({
   function(use)
     -- 拡張機能マネージャー
     use 'wbthomason/packer.nvim'
+    --------------------- colorschemes --------------------
+    -- tokyonight
+    use("folke/tokyonight.nvim")
+    -- dracula.nvim
+    use("Mofiqul/dracula.nvim")
+    -------------------------------------------------------
   end,
   config = {
     display = {

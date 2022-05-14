@@ -6,3 +6,6 @@ require("keybindings")
 
 -- 拡張機能
 require("plugins")
+
+-- Colorscheme
+require("colorscheme")
