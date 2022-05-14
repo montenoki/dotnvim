@@ -55,3 +55,32 @@ map("n", "<C-k>", "4k", opt)
 
 map("n", "<C-u>", "9k", opt)  -- 9行
 map("n", "<C-d>", "9j", opt)
+
+-------------------------------------------------------
+-- Plugin キーバインド
+local pluginKeys = {}
+
+-- nvim-tree
+map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)  -- alt + m ON/OFF
+-- ファイル操作
+pluginKeys.nvimTreeList = {
+  -- Open file
+  { key = {"<CR>", "o", "<2-LeftMouse>"}, action = "edit" },
+  -- Open file at split window
+  { key = "v", action = "vsplit" },
+  { key = "h", action = "split" },
+  -- ignore ファイル表示・非表示
+  { key = "i", action = "toggle_ignored" }, -- Ignore (node_modules)
+  -- dot ファイル表示・非表示 
+  { key = ".", action = "toggle_dotfiles" }, -- Hide (dotfiles)
+
+  { key = "<F5>", action = "refresh" },
+  { key = "a", action = "create" },
+  { key = "d", action = "remove" },
+  { key = "r", action = "rename" },
+  { key = "x", action = "cut" },
+  { key = "c", action = "copy" },
+  { key = "p", action = "paste" },
+  { key = "s", action = "system_open" },
+}
+return pluginKeys

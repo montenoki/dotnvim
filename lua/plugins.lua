@@ -21,8 +21,9 @@ packer.startup({
     use("ful1e5/onedark.nvim")
     -- nightfox
     use("EdenEast/nightfox.nvim")
-
     -------------------------------------------------------
+    -- ディレクトリツリー
+    use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
   end,
   config = {
     display = {
