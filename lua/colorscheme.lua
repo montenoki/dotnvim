@@ -1,3 +1,5 @@
+vim.o.background = 'dark'
+
 local colorscheme = 'dracula'
 -- tokyonight
 -- OceanicNext
@@ -6,11 +8,9 @@ local colorscheme = 'dracula'
 -- nord
 -- onedark
 -- nightfox
-vim.o.background = 'dark'
-vim.g.tokyonight_style = 'storm' -- day / night
+
 -- 透明化
-vim.g.tokyonight_transparent = true
-vim.g.tokyonight_transparent_sidebar = true
+vim.g.dracula_transparent_bg = true
 
 local status_ok, _ = pcall(vim.cmd, 'colorscheme ' .. colorscheme)
 if not status_ok then

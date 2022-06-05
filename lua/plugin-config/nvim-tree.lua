@@ -19,8 +19,8 @@ nvim_tree.setup({
     },
     -- dot ファイルと node_modules フォルダー非表示
     filters = {
-        dotfiles = true,
-        custom = { 'node_modules' },
+        dotfiles = false,
+        custom = {},
     },
     view = {
         -- 幅

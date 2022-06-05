@@ -31,7 +31,9 @@ cmp.setup({
 
         -- -- For snippy users.
         -- { name = 'snippy' },
-    }, { { name = 'buffer' }, { name = 'path' } }),
+
+        { name = "buffer" },
+    }, { { name = 'path' } }),
 
     -- キーバインド導入
     mapping = require('keybindings').cmp(cmp),
@@ -41,6 +43,7 @@ cmp.setup({
 
 -- / 検索モード buffer を使う
 cmp.setup.cmdline('/', {
+    mapping = cmp.mapping.preset.cmdline(),
     sources = {
         { name = 'buffer' },
     },
@@ -48,6 +51,7 @@ cmp.setup.cmdline('/', {
 
 -- : コマンドモード path cmdline を使う
 cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
     sources = cmp.config.sources({
         { name = 'path' },
     }, {

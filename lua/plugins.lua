@@ -50,6 +50,8 @@ packer.startup({
         use('lukas-reineke/indent-blankline.nvim')
         -- code formatter
         use('mhartington/formatter.nvim')
+        -- terminal toggle
+        use({ 'akinsho/toggleterm.nvim', tag = 'v1.*' })
         ------------------------- LSP --------------------------
         use({ 'williamboman/nvim-lsp-installer' })
         -- Lspconfig
@@ -91,5 +93,5 @@ pcall(
     autocmd!
     autocmd BufWritePost plugins.lua source <afile> | PackerSync
     augroup end
-  ]]
+    ]]
 )
